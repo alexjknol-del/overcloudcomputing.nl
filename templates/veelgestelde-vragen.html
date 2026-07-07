@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block title %}Veelgestelde vragen over cloud computing | Over Cloud Computing{% endblock %}
+{% block description %}Directe antwoorden op veelgestelde vragen over cloud computing: veiligheid, kosten, dataopslag binnen de EU, beveiliging en de overstap naar de cloud.{% endblock %}
+{% block head_extra %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {% for f in faqs %}
+    {
+      "@type": "Question",
+      "name": {{ f.q | tojson }},
+      "acceptedAnswer": { "@type": "Answer", "text": {{ f.a_plain | tojson }} }
+    }{% if not loop.last %},{% endif %}
+    {% endfor %}
+  ]
+}
+</script>
+{% endblock %}
+
+{% block content %}
+<section class="topper">
+  <div class="wrap">
+    <span class="kicker">Vragen</span>
+    <h1>Veelgestelde vragen</h1>
+    <p class="topper-lead">Korte antwoorden op de vragen die organisaties het vaakst stellen over cloud computing.</p>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap wrap-read">
+    <div class="faq">
+      {% for f in faqs %}
+      <details class="faq-item"{% if loop.first %} open{% endif %}>
+        <summary>{{ f.q }}</summary>
+        <div class="faq-answer">{{ f.a | safe }}</div>
+      </details>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endblock %}

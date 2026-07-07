@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+{% block title %}Cloudmodellen: IaaS, PaaS, SaaS en de vormen publiek, privaat en hybride | Over Cloud Computing{% endblock %}
+{% block description %}Uitleg van de cloudmodellen. Het verschil tussen IaaS, PaaS en SaaS, en tussen publieke, private, hybride en multicloud, met de afwegingen per model.{% endblock %}
+
+{% block content %}
+<section class="topper">
+  <div class="wrap">
+    <span class="kicker">Basis</span>
+    <h1>Cloudmodellen</h1>
+    <p class="topper-lead">Cloud computing kent twee indelingen die vaak door elkaar lopen: de dienstmodellen die bepalen hoeveel een organisatie zelf beheert, en de opstellingsvormen die bepalen waar en voor wie de omgeving draait.</p>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap wrap-read">
+    <span class="kicker">Dienstmodellen</span>
+    <h2 class="block-head">Hoeveel beheert een organisatie zelf?</h2>
+    <p class="block-intro">De dienstmodellen verschillen in de verdeling van het beheer tussen aanbieder en afnemer. Hoe hoger het model, hoe meer de aanbieder overneemt en hoe minder een organisatie zelf hoeft in te richten.</p>
+  </div>
+  <div class="wrap">
+    <div class="model-stack">
+      <article class="model-card">
+        <span class="model-tag">IaaS</span>
+        <h3>Infrastructuur als dienst</h3>
+        <p>De aanbieder levert de rekenkracht, opslag en netwerken. De afnemer installeert en beheert daarop zelf het besturingssysteem, de software en de applicaties. Dit model biedt de meeste vrijheid en vraagt de meeste eigen kennis.</p>
+        <p class="model-fit">Passend wanneer volledige controle over de omgeving nodig is.</p>
+      </article>
+      <article class="model-card">
+        <span class="model-tag">PaaS</span>
+        <h3>Platform als dienst</h3>
+        <p>De aanbieder levert naast de infrastructuur ook het platform om software te bouwen en te draaien. De afnemer richt zich op de eigen applicatie en hoeft het onderliggende systeem niet te beheren.</p>
+        <p class="model-fit">Passend voor ontwikkelteams die snel willen bouwen zonder serverbeheer.</p>
+      </article>
+      <article class="model-card">
+        <span class="model-tag">SaaS</span>
+        <h3>Software als dienst</h3>
+        <p>De aanbieder levert een kant-en-klare applicatie via internet. De afnemer gebruikt de software en beheert enkel de eigen gegevens en instellingen. Onderhoud, updates en beveiliging van de applicatie liggen bij de aanbieder.</p>
+        <p class="model-fit">Passend wanneer een werkende toepassing belangrijker is dan controle.</p>
+      </article>
+    </div>
+    <p class="block-note">De verdeling van het beheer bepaalt ook de verdeling van de beveiliging. Meer daarover in de gids over het <a href="/kennisbank/gedeelde-verantwoordelijkheid/">gedeelde verantwoordelijkheidsmodel</a>.</p>
+  </div>
+</section>
+
+<section class="band band-tint">
+  <div class="wrap wrap-read">
+    <span class="kicker">Opstellingsvormen</span>
+    <h2 class="block-head">Waar draait de omgeving?</h2>
+    <p class="block-intro">Naast het dienstmodel telt de opstelling: draait de omgeving op gedeelde infrastructuur, op een eigen afgeschermde omgeving, of op een combinatie daarvan.</p>
+  </div>
+  <div class="wrap">
+    <div class="form-grid">
+      <article class="form-card">
+        <h3>Publieke cloud</h3>
+        <p>Gedeelde infrastructuur die door een aanbieder wordt geleverd aan meerdere afnemers. Schaalbaar en zonder eigen hardware, met kosten naar gebruik. De meest voorkomende vorm.</p>
+      </article>
+      <article class="form-card">
+        <h3>Private cloud</h3>
+        <p>Een omgeving die exclusief voor één organisatie draait, op eigen hardware of afgeschermd bij een aanbieder. Meer controle en isolatie, tegen hogere kosten en meer beheer.</p>
+      </article>
+      <article class="form-card">
+        <h3>Hybride cloud</h3>
+        <p>Een combinatie van publiek en privaat, waarbij werklast wordt verdeeld naar wat per onderdeel het beste past. Gevoelige data blijft afgeschermd, terwijl de rest profiteert van schaalbaarheid.</p>
+      </article>
+      <article class="form-card">
+        <h3>Multicloud</h3>
+        <p>Het gebruik van diensten van meerdere aanbieders naast elkaar. Dit vermindert de afhankelijkheid van één partij, maar vraagt meer coördinatie in beheer en beveiliging.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap wrap-read">
+    <span class="kicker">Keuze</span>
+    <h2 class="block-head">Welk model past</h2>
+    <div class="prose">
+      <p>Er bestaat geen model dat voor iedere situatie het beste is. De juiste keuze hangt af van de eisen rond controle, kosten, beschikbare kennis en de gevoeligheid van de data. Een organisatie die met persoonsgegevens werkt, weegt de locatie van de opslag zwaar mee, omdat de AVG opslag binnen de Europese Unie als uitgangspunt neemt.</p>
+      <p>In de praktijk kiezen veel organisaties niet voor één model, maar voor een mix die per werklast verschilt. Een gefaseerde overstap helpt om die keuzes onderbouwd te maken. De aanpak daarvoor staat in de gids over <a href="/kennisbank/cloudmigratie-in-fasen/">cloudmigratie in vijf fasen</a>.</p>
+    </div>
+    <p class="block-note">Onbekende termen op deze pagina staan verklaard in de <a href="/begrippen/">begrippenlijst</a>.</p>
+  </div>
+</section>
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block title %}Kennisbank | Over Cloud Computing{% endblock %}
+{% block description %}Praktische gidsen over cloud computing: migratie, kosten, beveiliging, continuïteit en architectuur, geschreven voor Nederlandse organisaties.{% endblock %}
+
+{% block content %}
+<section class="topper">
+  <div class="wrap">
+    <span class="kicker">Kennisbank</span>
+    <h1>Gidsen over cloud computing</h1>
+    <p class="topper-lead">Praktische uitleg over de onderwerpen waar organisaties bij de cloud tegenaan lopen, van migratie en kosten tot beveiliging en continuïteit.</p>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <ol class="index-list">
+      {% for g in guides %}
+      <li class="index-item">
+        <a href="{{ g.url }}">
+          <span class="index-num">{{ "%02d"|format(loop.index) }}</span>
+          <span class="index-content">
+            <span class="index-cat">{{ g.category }}</span>
+            <span class="index-title">{{ g.title }}</span>
+            <span class="index-desc">{{ g.description }}</span>
+            <span class="index-meta">{{ g.date_display }} &middot; {{ g.reading_time }} min lezen</span>
+          </span>
+        </a>
+      </li>
+      {% endfor %}
+    </ol>
+  </div>
+</section>
+{% endblock %}

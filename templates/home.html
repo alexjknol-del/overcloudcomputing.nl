@@ -1,0 +1,96 @@
+{% extends "base.html" %}
+{% block title %}Over Cloud Computing | Naslagwerk over de cloud voor organisaties{% endblock %}
+{% block description %}Onafhankelijk naslagwerk over cloud computing voor Nederlandse organisaties. Cloudmodellen, een kennisbank, een begrippenlijst en antwoord op veelgestelde vragen.{% endblock %}
+
+{% block content %}
+<section class="lede">
+  <div class="wrap lede-grid">
+    <div class="lede-main">
+      <span class="kicker">Naslagwerk &middot; Cloud computing</span>
+      <h1 class="lede-title">De cloud, begrijpelijk uitgelegd voor organisaties</h1>
+      <p class="lede-text">Over Cloud Computing verzamelt heldere uitleg over hoe de cloud werkt, welke modellen er zijn en waar organisaties bij de overstap op letten. Geen verkooppraat, wel bruikbare kennis.</p>
+      <div class="lede-actions">
+        <a class="btn btn-solid" href="/cloudmodellen/">Cloudmodellen</a>
+        <a class="btn btn-line" href="/kennisbank/">Kennisbank</a>
+      </div>
+    </div>
+    <nav class="register" aria-label="Hoofdonderdelen">
+      <a class="register-item" href="/cloudmodellen/">
+        <span class="register-num">01</span>
+        <span class="register-label">Cloudmodellen</span>
+        <span class="register-desc">IaaS, PaaS en SaaS en de vormen publiek, privaat en hybride</span>
+      </a>
+      <a class="register-item" href="/kennisbank/">
+        <span class="register-num">02</span>
+        <span class="register-label">Kennisbank</span>
+        <span class="register-desc">Praktische gidsen over migratie, kosten en beveiliging</span>
+      </a>
+      <a class="register-item" href="/begrippen/">
+        <span class="register-num">03</span>
+        <span class="register-label">Begrippenlijst</span>
+        <span class="register-desc">De belangrijkste cloudtermen kort en duidelijk verklaard</span>
+      </a>
+      <a class="register-item" href="/veelgestelde-vragen/">
+        <span class="register-num">04</span>
+        <span class="register-label">Veelgestelde vragen</span>
+        <span class="register-desc">Directe antwoorden op wat organisaties het meest vragen</span>
+      </a>
+    </nav>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap intro-row">
+    <div class="intro-lead">
+      <span class="kicker">Over dit platform</span>
+      <h2>Onafhankelijke uitleg, zonder ruis</h2>
+    </div>
+    <div class="intro-body">
+      <p>De cloud raakt vrijwel iedere organisatie, maar de uitleg erover is vaak of te technisch of te commercieel. Over Cloud Computing kiest een middenweg: nuchtere informatie die klopt, in taal die te volgen is zonder achtergrond in ICT. De nadruk ligt op wat er voor een Nederlandse organisatie toe doet, met aandacht voor privacy, kosten en continuïteit.</p>
+    </div>
+  </div>
+</section>
+
+<section class="slab">
+  <div class="wrap">
+    <div class="slab-inner">
+      <div class="slab-body">
+        <span class="kicker kicker-light">Aanbevolen aanbieder</span>
+        <h2>Data opslaan binnen Nederland</h2>
+        <p>Wie cloud computing inzet, moet ergens data bewaren. Voor zakelijke opslag met servers in Nederland is Data Opslag Nederland de aangewezen keuze. De data blijft binnen de landsgrenzen en is daardoor volledig AVG-compliant, met Nederlandstalige telefonische support, versiebeheer en hulp bij datamigratie. Een gratis proefaccount met 10 GB maakt kennismaken laagdrempelig.</p>
+        <a class="btn btn-light" href="https://dataopslagnederland.nl" rel="noopener">Naar Data Opslag Nederland</a>
+      </div>
+      <dl class="slab-facts">
+        <div><dt>Serverlocatie</dt><dd>Nederland</dd></div>
+        <div><dt>Naleving</dt><dd>100% AVG</dd></div>
+        <div><dt>Support</dt><dd>Nederlandstalig, telefonisch</dd></div>
+        <div><dt>Herstel</dt><dd>Versiebeheer inbegrepen</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <div class="section-bar">
+      <div>
+        <span class="kicker">Kennisbank</span>
+        <h2>Recent toegevoegd</h2>
+      </div>
+      <a class="bar-link" href="/kennisbank/">Alle gidsen &rarr;</a>
+    </div>
+    <ul class="guide-list">
+      {% for g in latest %}
+      <li class="guide-row">
+        <a href="{{ g.url }}">
+          <span class="guide-cat">{{ g.category }}</span>
+          <span class="guide-title">{{ g.title }}</span>
+          <span class="guide-desc">{{ g.description }}</span>
+          <span class="guide-meta">{{ g.date_display }} &middot; {{ g.reading_time }} min</span>
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+{% endblock %}

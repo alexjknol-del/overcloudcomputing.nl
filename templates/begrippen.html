@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block title %}Begrippenlijst cloud computing | Over Cloud Computing{% endblock %}
+{% block description %}De belangrijkste begrippen uit de wereld van cloud computing, kort en duidelijk verklaard. Van IaaS en SaaS tot latentie, SLA en virtualisatie.{% endblock %}
+{% block head_extra %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "DefinedTermSet",
+  "name": "Begrippenlijst cloud computing",
+  "url": "{{ site.url }}/begrippen/",
+  "hasDefinedTerm": [
+    {% for t in terms %}
+    {
+      "@type": "DefinedTerm",
+      "name": {{ t.term | tojson }},
+      "description": {{ t.definition | tojson }}
+    }{% if not loop.last %},{% endif %}
+    {% endfor %}
+  ]
+}
+</script>
+{% endblock %}
+
+{% block content %}
+<section class="topper">
+  <div class="wrap">
+    <span class="kicker">Naslag</span>
+    <h1>Begrippenlijst</h1>
+    <p class="topper-lead">De termen die bij cloud computing het vaakst voorbijkomen, kort verklaard in gewone taal.</p>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <dl class="glossary">
+      {% for t in terms %}
+      <div class="glossary-item" id="{{ t.anchor }}">
+        <dt>{{ t.term }}</dt>
+        <dd>{{ t.definition }}</dd>
+      </div>
+      {% endfor %}
+    </dl>
+  </div>
+</section>
+{% endblock %}

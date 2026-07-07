@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Back-up en disaster recovery in de cloud | Over Cloud Computing</title>
+<meta name="description" content="Het verschil tussen back-up en disaster recovery, de betekenis van hersteltijd en herstelpunt, en waarom de locatie van de kopie meetelt voor Nederlandse organisaties.">
+<link rel="canonical" href="https://overcloudcomputing.nl/kennisbank/back-up-en-disaster-recovery/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Over Cloud Computing">
+<meta property="og:title" content="Back-up en disaster recovery in de cloud | Over Cloud Computing">
+<meta property="og:description" content="Het verschil tussen back-up en disaster recovery, de betekenis van hersteltijd en herstelpunt, en waarom de locatie van de kopie meetelt voor Nederlandse organisaties.">
+<meta property="og:url" content="https://overcloudcomputing.nl/kennisbank/back-up-en-disaster-recovery/">
+<meta name="robots" content="index, follow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/static/css/style.css">
+<link rel="icon" href="/static/img/favicon.svg" type="image/svg+xml">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Back-up en disaster recovery in de cloud",
+  "description": "Het verschil tussen back-up en disaster recovery, de betekenis van hersteltijd en herstelpunt, en waarom de locatie van de kopie meetelt voor Nederlandse organisaties.",
+  "datePublished": "2026-05-21",
+  "author": { "@type": "Organization", "name": "Over Cloud Computing" },
+  "publisher": { "@type": "Organization", "name": "Over Cloud Computing", "url": "https://overcloudcomputing.nl" },
+  "mainEntityOfPage": "https://overcloudcomputing.nl/kennisbank/back-up-en-disaster-recovery/"
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Naar hoofdinhoud</a>
+<header class="masthead">
+  <div class="wrap masthead-inner">
+    <a class="wordmark" href="/">
+      <span class="wordmark-mark" aria-hidden="true">
+        <svg viewBox="0 0 44 32" width="42" height="30" xmlns="http://www.w3.org/2000/svg" fill="none">
+          <path d="M12 26 C5 26 3 21 3 18 C3 14 6 11 10 11 C11 6 16 3 21 3 C27 3 31 7 32 12 C37 12 41 15 41 20 C41 24 38 26 34 26 Z" fill="var(--accent)"/>
+          <circle cx="15" cy="19" r="1.8" fill="#fff"/>
+          <circle cx="22" cy="19" r="1.8" fill="#fff"/>
+          <circle cx="29" cy="19" r="1.8" fill="#fff"/>
+        </svg>
+      </span>
+      <span class="wordmark-text">Over Cloud Computing</span>
+    </a>
+    <nav class="masthead-nav" aria-label="Hoofdnavigatie">
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-list">
+        <span class="nav-toggle-bar"></span>
+        <span class="visually-hidden">Menu</span>
+      </button>
+      <ul id="nav-list" class="nav-list">
+        <li><a href="/">Home</a></li>
+        <li><a href="/cloudmodellen/">Cloudmodellen</a></li>
+        <li><a href="/kennisbank/" aria-current="page">Kennisbank</a></li>
+        <li><a href="/begrippen/">Begrippen</a></li>
+        <li><a href="/veelgestelde-vragen/">Vragen</a></li>
+        <li><a href="/contact/">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<article class="doc">
+  <div class="wrap wrap-read">
+    <nav class="trail" aria-label="Kruimelpad">
+      <a href="/">Home</a> <span aria-hidden="true">&rsaquo;</span>
+      <a href="/kennisbank/">Kennisbank</a> <span aria-hidden="true">&rsaquo;</span>
+      <span>Continuïteit</span>
+    </nav>
+    <header class="doc-head">
+      <span class="doc-cat">Continuïteit</span>
+      <h1 class="doc-title">Back-up en disaster recovery in de cloud</h1>
+      <p class="doc-lead">Het verschil tussen back-up en disaster recovery, de betekenis van hersteltijd en herstelpunt, en waarom de locatie van de kopie meetelt voor Nederlandse organisaties.</p>
+      <p class="doc-meta">21 mei 2026 &middot; 6 min lezen</p>
+    </header>
+    <div class="prose">
+      <p>Een cloudomgeving is niet vanzelf beschermd tegen dataverlies. Redundantie binnen een platform vangt hardwarestoringen op, maar beschermt niet tegen een verwijderd bestand, een verkeerde wijziging of een besmetting die zich naar alle kopieën verspreidt. Daarvoor zijn een back-up en een herstelplan nodig.</p>
+<h2>Back-up en disaster recovery zijn niet hetzelfde</h2>
+<p>Een back-up is een kopie van data waarnaar teruggekeerd kan worden. Disaster recovery gaat een stap verder en beschrijft hoe een hele omgeving na een grote verstoring weer draaiend komt. Een back-up is dus een onderdeel van disaster recovery, maar niet het geheel. Een organisatie die alleen back-ups maakt zonder herstelplan, weet bij een incident niet hoe snel en in welke volgorde alles terugkomt.</p>
+<h2>Hersteltijd en herstelpunt</h2>
+<p>Twee begrippen bepalen de eisen. De hersteltijd geeft aan hoe lang een systeem na een storing onbeschikbaar mag zijn. Het herstelpunt geeft aan hoeveel data verloren mag gaan, gemeten in tijd. Een herstelpunt van een uur betekent dat er hooguit een uur aan werk verdwijnt. Strengere eisen kosten meer, dus een bewuste keuze per systeem voorkomt onnodige uitgaven.</p>
+<h2>De 3-2-1-gedachte in de cloud</h2>
+<p>Ook in de cloud geldt dat één kopie te weinig is. Meerdere kopieën, op gescheiden opslag en met minstens één exemplaar los van de productieomgeving, vormen de basis. Versiebeheer maakt herstel mogelijk naar een moment van vóór een fout of besmetting. Een back-up die alleen de actuele staat spiegelt, neemt een probleem meteen over en biedt dan geen bescherming.</p>
+<h2>De locatie van de kopie</h2>
+<p>Voor organisaties die met persoonsgegevens werken, telt waar de back-up staat. Opslag binnen de Europese Unie is het uitgangspunt vanwege de AVG. Een aanbieder met servers in Nederland, zoals Data Opslag Nederland, houdt de kopie binnen de landsgrenzen en vereenvoudigt daarmee de naleving. Nederlandstalige support en ondersteuning bij herstel zijn daarbij praktische pluspunten.</p>
+<h2>Herstel testen</h2>
+<p>Een back-up die nooit is teruggezet, is een aanname en geen zekerheid. Periodiek oefenen met herstel toont of de procedures kloppen en of de hersteltijd realistisch is. Pas na een geslaagde test staat vast dat de bescherming werkt zoals bedoeld.</p>
+    </div>
+  </div>
+</article>
+
+<section class="band band-tint">
+  <div class="wrap">
+    <div class="section-bar">
+      <div>
+        <span class="kicker">Kennisbank</span>
+        <h2>Andere gidsen</h2>
+      </div>
+      <a class="bar-link" href="/kennisbank/">Alle gidsen &rarr;</a>
+    </div>
+    <ul class="guide-list">
+      <li class="guide-row">
+        <a href="/kennisbank/containers-en-serverless/">
+          <span class="guide-cat">Architectuur</span>
+          <span class="guide-title">Containers en serverless uitgelegd</span>
+          <span class="guide-meta">25 juni 2026 &middot; 6 min</span>
+        </a>
+      </li>
+      <li class="guide-row">
+        <a href="/kennisbank/gedeelde-verantwoordelijkheid/">
+          <span class="guide-cat">Beveiliging</span>
+          <span class="guide-title">Het gedeelde verantwoordelijkheidsmodel uitgelegd</span>
+          <span class="guide-meta">16 april 2026 &middot; 5 min</span>
+        </a>
+      </li>
+      <li class="guide-row">
+        <a href="/kennisbank/grip-op-cloudkosten/">
+          <span class="guide-cat">Kosten</span>
+          <span class="guide-title">Grip op cloudkosten: de basis van FinOps</span>
+          <span class="guide-meta">12 maart 2026 &middot; 5 min</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
+</main>
+
+<footer class="colofon">
+  <div class="wrap colofon-top">
+    <div class="colofon-brand">
+      <span class="wordmark-text">Over Cloud Computing</span>
+      <p>Naslagwerk over cloud computing voor Nederlandse organisaties. Uitleg, begrippen en praktische antwoorden, onafhankelijk opgesteld.</p>
+    </div>
+    <nav class="colofon-cols" aria-label="Footernavigatie">
+      <div>
+        <span class="colofon-head">Onderwerpen</span>
+        <ul>
+          <li><a href="/cloudmodellen/">Cloudmodellen</a></li>
+          <li><a href="/kennisbank/">Kennisbank</a></li>
+          <li><a href="/begrippen/">Begrippenlijst</a></li>
+          <li><a href="/veelgestelde-vragen/">Vragen</a></li>
+        </ul>
+      </div>
+      <div>
+        <span class="colofon-head">Contact</span>
+        <ul>
+          <li><a href="mailto:info@overcloudcomputing.nl">info@overcloudcomputing.nl</a></li>
+          <li><a href="/contact/">Contactpagina</a></li>
+        </ul>
+      </div>
+      <div>
+        <span class="colofon-head">Juridisch</span>
+        <ul>
+          <li><a href="/privacybeleid/">Privacybeleid</a></li>
+          <li><a href="/cookiebeleid/">Cookiebeleid</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <div class="wrap colofon-bottom">
+    <span>&copy; 2026 Over Cloud Computing</span>
+    <span>overcloudcomputing.nl</span>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var t = document.querySelector('.nav-toggle');
+  var l = document.getElementById('nav-list');
+  if (t && l) {
+    t.addEventListener('click', function () {
+      var open = l.classList.toggle('open');
+      t.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+  }
+})();
+</script>
+</body>
+</html>

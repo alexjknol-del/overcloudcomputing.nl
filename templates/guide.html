@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% block title %}{{ guide.title }} | Over Cloud Computing{% endblock %}
+{% block description %}{{ guide.description }}{% endblock %}
+{% block head_extra %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": {{ guide.title | tojson }},
+  "description": {{ guide.description | tojson }},
+  "datePublished": "{{ guide.date_iso }}",
+  "author": { "@type": "Organization", "name": "Over Cloud Computing" },
+  "publisher": { "@type": "Organization", "name": "Over Cloud Computing", "url": "{{ site.url }}" },
+  "mainEntityOfPage": "{{ site.url }}{{ guide.url }}"
+}
+</script>
+{% endblock %}
+
+{% block content %}
+<article class="doc">
+  <div class="wrap wrap-read">
+    <nav class="trail" aria-label="Kruimelpad">
+      <a href="/">Home</a> <span aria-hidden="true">&rsaquo;</span>
+      <a href="/kennisbank/">Kennisbank</a> <span aria-hidden="true">&rsaquo;</span>
+      <span>{{ guide.category }}</span>
+    </nav>
+    <header class="doc-head">
+      <span class="doc-cat">{{ guide.category }}</span>
+      <h1 class="doc-title">{{ guide.title }}</h1>
+      <p class="doc-lead">{{ guide.description }}</p>
+      <p class="doc-meta">{{ guide.date_display }} &middot; {{ guide.reading_time }} min lezen</p>
+    </header>
+    <div class="prose">
+      {{ guide.html | safe }}
+    </div>
+  </div>
+</article>
+
+<section class="band band-tint">
+  <div class="wrap">
+    <div class="section-bar">
+      <div>
+        <span class="kicker">Kennisbank</span>
+        <h2>Andere gidsen</h2>
+      </div>
+      <a class="bar-link" href="/kennisbank/">Alle gidsen &rarr;</a>
+    </div>
+    <ul class="guide-list">
+      {% for g in related %}
+      <li class="guide-row">
+        <a href="{{ g.url }}">
+          <span class="guide-cat">{{ g.category }}</span>
+          <span class="guide-title">{{ g.title }}</span>
+          <span class="guide-meta">{{ g.date_display }} &middot; {{ g.reading_time }} min</span>
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+{% endblock %}
