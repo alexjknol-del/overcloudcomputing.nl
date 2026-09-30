@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Voorraadbeheer in de cloud: barcodes, scanners en een centrale database | Over Cloud Computing</title>
+<meta name="description" content="Een cloudgebaseerd voorraadsysteem verplaatst de database naar een datacenter. Hoe scanners, barcode etiketten en koppelingen dan samenwerken, en waar op te letten bij storingen en gegevensbeheer.">
+<link rel="canonical" href="https://overcloudcomputing.nl/kennisbank/voorraadbeheer-in-de-cloud/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Over Cloud Computing">
+<meta property="og:title" content="Voorraadbeheer in de cloud: barcodes, scanners en een centrale database | Over Cloud Computing">
+<meta property="og:description" content="Een cloudgebaseerd voorraadsysteem verplaatst de database naar een datacenter. Hoe scanners, barcode etiketten en koppelingen dan samenwerken, en waar op te letten bij storingen en gegevensbeheer.">
+<meta property="og:url" content="https://overcloudcomputing.nl/kennisbank/voorraadbeheer-in-de-cloud/">
+<meta name="robots" content="index, follow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/static/css/style.css">
+<link rel="icon" href="/static/img/favicon.svg" type="image/svg+xml">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Voorraadbeheer in de cloud: barcodes, scanners en een centrale database",
+  "description": "Een cloudgebaseerd voorraadsysteem verplaatst de database naar een datacenter. Hoe scanners, barcode etiketten en koppelingen dan samenwerken, en waar op te letten bij storingen en gegevensbeheer.",
+  "datePublished": "2026-09-21",
+  "author": { "@type": "Organization", "name": "Over Cloud Computing" },
+  "publisher": { "@type": "Organization", "name": "Over Cloud Computing", "url": "https://overcloudcomputing.nl" },
+  "mainEntityOfPage": "https://overcloudcomputing.nl/kennisbank/voorraadbeheer-in-de-cloud/"
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Naar hoofdinhoud</a>
+<header class="masthead">
+  <div class="wrap masthead-inner">
+    <a class="wordmark" href="/">
+      <span class="wordmark-mark" aria-hidden="true">
+        <svg viewBox="0 0 44 32" width="42" height="30" xmlns="http://www.w3.org/2000/svg" fill="none">
+          <path d="M12 26 C5 26 3 21 3 18 C3 14 6 11 10 11 C11 6 16 3 21 3 C27 3 31 7 32 12 C37 12 41 15 41 20 C41 24 38 26 34 26 Z" fill="var(--accent)"/>
+          <circle cx="15" cy="19" r="1.8" fill="#fff"/>
+          <circle cx="22" cy="19" r="1.8" fill="#fff"/>
+          <circle cx="29" cy="19" r="1.8" fill="#fff"/>
+        </svg>
+      </span>
+      <span class="wordmark-text">Over Cloud Computing</span>
+    </a>
+    <nav class="masthead-nav" aria-label="Hoofdnavigatie">
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-list">
+        <span class="nav-toggle-bar"></span>
+        <span class="visually-hidden">Menu</span>
+      </button>
+      <ul id="nav-list" class="nav-list">
+        <li><a href="/">Home</a></li>
+        <li><a href="/cloudmodellen/">Cloudmodellen</a></li>
+        <li><a href="/kennisbank/" aria-current="page">Kennisbank</a></li>
+        <li><a href="/begrippen/">Begrippen</a></li>
+        <li><a href="/veelgestelde-vragen/">Vragen</a></li>
+        <li><a href="/contact/">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<article class="doc">
+  <div class="wrap wrap-read">
+    <nav class="trail" aria-label="Kruimelpad">
+      <a href="/">Home</a> <span aria-hidden="true">&rsaquo;</span>
+      <a href="/kennisbank/">Kennisbank</a> <span aria-hidden="true">&rsaquo;</span>
+      <span>Toepassing</span>
+    </nav>
+    <header class="doc-head">
+      <span class="doc-cat">Toepassing</span>
+      <h1 class="doc-title">Voorraadbeheer in de cloud: barcodes, scanners en een centrale database</h1>
+      <p class="doc-lead">Een cloudgebaseerd voorraadsysteem verplaatst de database naar een datacenter. Hoe scanners, barcode etiketten en koppelingen dan samenwerken, en waar op te letten bij storingen en gegevensbeheer.</p>
+      <p class="doc-meta">21 september 2026 &middot; 4 min lezen</p>
+    </header>
+    <div class="prose">
+      <p>Voorraadbeheer draaide lang op een server in het eigen pand of op een spreadsheet op één computer. Cloudgebaseerde voorraadsystemen verplaatsen de database naar een datacenter, bereikbaar vanaf elke scanner, telefoon of laptop met een internetverbinding. Dat verandert niet alleen waar de gegevens staan, maar ook hoe de koppeling met het magazijn werkt.</p>
+<h2>Hoe het werkt</h2>
+<p>Een cloudvoorraadsysteem is meestal een SaaS-dienst. De aanbieder beheert de software en de database, de gebruiker werkt via een browser of een app. Scanners en mobiele terminals in het magazijn sturen elke scan via wifi of mobiel internet naar de centrale database. Een webshop, een boekhoudpakket of een verzendsysteem is via een API aan dezelfde database gekoppeld. Een verkoop in de webshop verlaagt zo direct de voorraad die het magazijn ziet.</p>
+<h2>De barcode als schakel</h2>
+<p>De verbinding tussen de fysieke voorraad en de database is de barcode. Elke locatie en elk artikel krijgt een code die overeenkomt met een record in het systeem. Code 128 is voor interne artikel- en locatiecodes het meest gebruikt. Een QR-code bevat meer gegevens en is met de camera van een telefoon te lezen, wat handig is als er geen aparte scanners worden aangeschaft.</p>
+<p>Een barcode verwijst alleen naar een record. Voorraadaantallen en andere wisselende gegevens staan niet op het etiket, maar in de database. Daardoor blijft het etiket geldig, ook als de gegevens veranderen.</p>
+<h2>Etiketten op stelling en vak</h2>
+<p>Op stalen stellingen zijn magnetische etiketten gangbaar, omdat ze zonder lijmresten meeverhuizen als de indeling verandert. Op hout of kunststof werkt een zelfklevend etiket beter. Bij <a href="https://www.mms-magneet.nl/barcode-etiketten/">MMS Magneetservice</a> zijn magazijnetiketten in beide uitvoeringen te krijgen, kant-en-klaar gedrukt op basis van aangeleverde gegevens of om zelf te printen. Een export van de locatiecodes uit het cloudsysteem vormt dan de basis voor de etiketten.</p>
+<h2>Offline en storingen</h2>
+<p>Een cloudsysteem is afhankelijk van de verbinding. Valt het internet of de wifi in het magazijn weg, dan komen scans niet aan. Veel apps bewaren scans tijdelijk op het apparaat en sturen ze door zodra de verbinding terug is. Bij de keuze voor een systeem is het verstandig na te gaan hoe dat is geregeld en hoe dubbele verwerking wordt voorkomen. Een goede wifidekking tussen de stellingen hoort bij de voorbereiding.</p>
+<h2>Gegevens en verantwoordelijkheid</h2>
+<p>Ook bij voorraadbeheer geldt het model van <a href="/kennisbank/gedeelde-verantwoordelijkheid/">gedeelde verantwoordelijkheid</a>. De aanbieder zorgt voor de beschikbaarheid en beveiliging van het platform, de gebruiker voor accounts, rechten en de juistheid van de gegevens. Een export van de voorraadgegevens op vaste momenten beschermt tegen dataverlies en maakt een overstap naar een andere aanbieder eenvoudiger.</p>
+<h2>Stapsgewijs invoeren</h2>
+<p>Invoeren gaat het best in fasen, net als bij een <a href="/kennisbank/cloudmigratie-in-fasen/">cloudmigratie</a>. Eerst de locatiecodes in het systeem en op de stellingen, daarna een proef met één productgroep en pas dan de rest. Over etiketmateriaal en houders is telefonisch advies te krijgen via <a href="https://www.mms-magneet.nl/">mms-magneet.nl</a>.</p>
+<p>Een centrale database met goede etiketten in het magazijn geeft iedereen dezelfde, actuele stand van de voorraad, van de orderpicker tot de boekhouding.</p>
+    </div>
+  </div>
+</article>
+
+<section class="band band-tint">
+  <div class="wrap">
+    <div class="section-bar">
+      <div>
+        <span class="kicker">Kennisbank</span>
+        <h2>Andere gidsen</h2>
+      </div>
+      <a class="bar-link" href="/kennisbank/">Alle gidsen &rarr;</a>
+    </div>
+    <ul class="guide-list">
+      <li class="guide-row">
+        <a href="/kennisbank/containers-en-serverless/">
+          <span class="guide-cat">Architectuur</span>
+          <span class="guide-title">Containers en serverless uitgelegd</span>
+          <span class="guide-meta">25 juni 2026 &middot; 6 min</span>
+        </a>
+      </li>
+      <li class="guide-row">
+        <a href="/kennisbank/back-up-en-disaster-recovery/">
+          <span class="guide-cat">Continuïteit</span>
+          <span class="guide-title">Back-up en disaster recovery in de cloud</span>
+          <span class="guide-meta">21 mei 2026 &middot; 6 min</span>
+        </a>
+      </li>
+      <li class="guide-row">
+        <a href="/kennisbank/gedeelde-verantwoordelijkheid/">
+          <span class="guide-cat">Beveiliging</span>
+          <span class="guide-title">Het gedeelde verantwoordelijkheidsmodel uitgelegd</span>
+          <span class="guide-meta">16 april 2026 &middot; 5 min</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
+</main>
+
+<footer class="colofon">
+  <div class="wrap colofon-top">
+    <div class="colofon-brand">
+      <span class="wordmark-text">Over Cloud Computing</span>
+      <p>Naslagwerk over cloud computing voor Nederlandse organisaties. Uitleg, begrippen en praktische antwoorden, onafhankelijk opgesteld.</p>
+    </div>
+    <nav class="colofon-cols" aria-label="Footernavigatie">
+      <div>
+        <span class="colofon-head">Onderwerpen</span>
+        <ul>
+          <li><a href="/cloudmodellen/">Cloudmodellen</a></li>
+          <li><a href="/kennisbank/">Kennisbank</a></li>
+          <li><a href="/begrippen/">Begrippenlijst</a></li>
+          <li><a href="/veelgestelde-vragen/">Vragen</a></li>
+        </ul>
+      </div>
+      <div>
+        <span class="colofon-head">Contact</span>
+        <ul>
+          <li><a href="mailto:info@overcloudcomputing.nl">info@overcloudcomputing.nl</a></li>
+          <li><a href="/contact/">Contactpagina</a></li>
+        </ul>
+      </div>
+      <div>
+        <span class="colofon-head">Juridisch</span>
+        <ul>
+          <li><a href="/privacybeleid/">Privacybeleid</a></li>
+          <li><a href="/cookiebeleid/">Cookiebeleid</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <div class="wrap colofon-bottom">
+    <span>&copy; 2026 Over Cloud Computing</span>
+    <span>overcloudcomputing.nl</span>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var t = document.querySelector('.nav-toggle');
+  var l = document.getElementById('nav-list');
+  if (t && l) {
+    t.addEventListener('click', function () {
+      var open = l.classList.toggle('open');
+      t.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+  }
+})();
+</script>
+</body>
+</html>
