@@ -117,6 +117,7 @@ def build():
     write("/contact/", render("contact.html", "/contact/", "/contact/"))
     write("/privacybeleid/", render("privacybeleid.html", "/privacybeleid/", None))
     write("/cookiebeleid/", render("cookiebeleid.html", "/cookiebeleid/", None))
+    write("/partners/", render("partners.html", "/partners/", None))
 
     for g in guides:
         write(g["url"], render("guide.html", g["url"], "/kennisbank/",
@@ -129,7 +130,7 @@ def build():
 
 def write_sitemap(guides):
     urls = ["/", "/cloudmodellen/", "/kennisbank/", "/begrippen/",
-            "/veelgestelde-vragen/", "/contact/", "/privacybeleid/", "/cookiebeleid/"]
+            "/veelgestelde-vragen/", "/contact/", "/privacybeleid/", "/cookiebeleid/", "/partners/"]
     urls += [g["url"] for g in guides]
     today = date.today().isoformat()
     lastmod = {g["url"]: g["date_iso"] for g in guides}
